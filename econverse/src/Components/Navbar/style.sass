@@ -2,13 +2,14 @@
   
 nav
   color: variables.$color-description
+  margin: 0 74px 0 86px
 
   .top
     align-items: center
     display: flex
-    justify-content: space-evenly
-    padding: 6px 0
-    border-bottom: 1px solid #F6F5F2
+    padding: 6px 0 6px 262px
+    
+
     .emphasis
       align-items: center
       display: flex
@@ -21,7 +22,37 @@ nav
       span
         color: variables.$color-primary
 
-  
+  .middle
+    align-items: center
+    border-top: 1px solid #F6F5F2
+    border-bottom: 1px solid #F6F5F2
+    display: flex
+    margin-left: 56px
+    padding: 7px 74px 14px 56px
+
+    .box-search
+      padding: 10px 16px 10px 24px
+      background: #F7F5F2
+      border-radius: 10px
+      font-size: 0.875rem
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-left: 95px
+      width: 657px
+
+      input[type="search"],input[type="search'"]:focus
+        width: 100%
+        background: transparent
+        border: none
+        outline-width: 0
+    
+    .box-shortcuts
+      display: flex
+      align-items: center
+      gap: 32px
+      margin-left: 61px
+
 
 
 
