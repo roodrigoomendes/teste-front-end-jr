@@ -7,6 +7,8 @@ import heart from '../../img/Heart.png'
 import usercircle from '../../img/UserCircle.png'
 import order from '../../img/order.png'
 import magnifyingGlass from '../../img/MagnifyingGlass.png'
+import crownSimple from '../../img/CrownSimple.png'
+
 
 import './style.sass'
 
@@ -52,7 +54,19 @@ export function Navbar(){
           </a>
         </div>
       
-      </div> 
+      </div>
+
+      <div className="bottom">
+        <a href="">todas categorias</a>
+        <a href="">supermercado</a>
+        <a href="">livros</a>
+        <a href="">moda</a>
+        <a href="">lançamentos</a>
+        <a href="" className='active'>oferta do dia</a>
+        <a href="">
+          <img src={crownSimple} alt="" />
+          assiantura</a>
+      </div>
     </nav>
   )
 }
