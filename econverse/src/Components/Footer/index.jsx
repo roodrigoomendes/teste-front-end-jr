@@ -57,7 +57,6 @@ export function Footer(){
         </div>
       </div>
       <Newsletter/>
-
     </footer>
   )
 }

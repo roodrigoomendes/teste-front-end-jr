@@ -6,6 +6,7 @@ import { ProductSection } from './Components/ProductSection/index';
 import { PartnersSection } from "./Components/PartnersSection";
 import { BrandsSection } from "./Components/BrandsSection";
 import { Footer } from "./Components/Footer";
+import { CopyrightSection } from "./Components/CopyrightSection";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <ProductSection/>
       </TitleSection>
       <Footer/>
+      <CopyrightSection/>
     </div>
   )
 }
