@@ -2,6 +2,7 @@ import { Header } from "./Components/Header"
 import { Navbar } from "./Components/Navbar"
 import { Subcategory } from "./Components/Subcategory"
 import { TitleSection } from "./Components/TitleSection"
+import { ProductSection } from './Components/ProductSection/index';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Header/>
       <TitleSection>Produtos relacionados</TitleSection>
       <Subcategory/>
+      <ProductSection/>
     </div>
   )
 }
