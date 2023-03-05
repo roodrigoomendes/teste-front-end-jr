@@ -5,6 +5,7 @@ import { TitleSection } from "./Components/TitleSection"
 import { ProductSection } from './Components/ProductSection/index';
 import { PartnersSection } from "./Components/PartnersSection";
 import { BrandsSection } from "./Components/BrandsSection";
+import { Footer } from "./Components/Footer";
 
 
 function App() {
@@ -15,15 +16,20 @@ function App() {
       <Header/>
       <TitleSection Title={'Produtos relacionados'}>
         <Subcategory/>
-      </TitleSection>
       <ProductSection/>
+      </TitleSection>
       <PartnersSection/>
       <TitleSection Title={'Produtos relacionados'}>
         <a href="#">Ver Todos</a>
-      </TitleSection>
       <ProductSection/>
+      </TitleSection>
       <PartnersSection/>
-      <BrandsSection/>
+      <BrandsSection/>      
+      <TitleSection Title={'Produtos relacionados'}>
+        <a href="#">Ver Todos</a>
+      <ProductSection/>
+      </TitleSection>
+      <Footer/>
     </div>
   )
 }
