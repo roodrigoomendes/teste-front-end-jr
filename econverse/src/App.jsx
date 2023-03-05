@@ -12,10 +12,14 @@ function App() {
     <div className="App">
       <Navbar/>
       <Header/>
-      <TitleSection>Produtos relacionados</TitleSection>
-      <Subcategory/>
+      <TitleSection Title={'Produtos relacionados'}>
+        <Subcategory/>
+      </TitleSection>
       <ProductSection/>
       <PartnersSection/>
+      <TitleSection Title={'Produtos relacionados'}>
+        <a href="#">Ver Todos</a>
+      </TitleSection>
     </div>
   )
 }
