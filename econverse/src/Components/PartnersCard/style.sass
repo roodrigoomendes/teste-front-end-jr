@@ -1,0 +1,34 @@
+@use '../../style/variables'
+@use '../../style/mixin'
+
+
+.ContainerPartnersCard
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: end
+  width: 574px
+  height: 350px
+  color: #ffffff
+  background-image: url('../../assets/Images/imagecard.png')
+  background: no-repeat cover
+  padding: 40px
+
+  .namePartners
+    font-weight: 700
+    font-size: 2.5rem
+    margin-bottom: 17px
+
+  .descriptionPartners
+    width: 174px
+    font-weight: 400
+    font-size: 1rem
+    margin-bottom: 32px
+  
+  .buttonPartners
+    width: 131px
+    padding: 12px 25px
+    font-weight: 900
+    font-size: 1rem
+    text-transform: uppercase
+    @include mixin.buttonStyle

@@ -3,6 +3,7 @@ import { Navbar } from "./Components/Navbar"
 import { Subcategory } from "./Components/Subcategory"
 import { TitleSection } from "./Components/TitleSection"
 import { ProductSection } from './Components/ProductSection/index';
+import { PartnersSection } from "./Components/PartnersSection";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <TitleSection>Produtos relacionados</TitleSection>
       <Subcategory/>
       <ProductSection/>
+      <PartnersSection/>
     </div>
   )
 }
