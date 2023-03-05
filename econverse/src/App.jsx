@@ -4,6 +4,7 @@ import { Subcategory } from "./Components/Subcategory"
 import { TitleSection } from "./Components/TitleSection"
 import { ProductSection } from './Components/ProductSection/index';
 import { PartnersSection } from "./Components/PartnersSection";
+import { BrandsSection } from "./Components/BrandsSection";
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
       <TitleSection Title={'Produtos relacionados'}>
         <a href="#">Ver Todos</a>
       </TitleSection>
+      <ProductSection/>
+      <PartnersSection/>
+      <BrandsSection/>
     </div>
   )
 }
