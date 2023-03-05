@@ -1,0 +1,50 @@
+@use '../../style/variables'
+@use '../../style/mixin'
+
+.containerNewsletter
+  padding: 40px 30px
+  background: #FFFFFF
+  border-radius: 10px
+  color: #3F3F40
+  text-transform: uppercase
+
+  .titleNewsletter
+    font-weight: 300
+    font-size: 18px 
+  
+  .emphasisNewslette
+    font-weight: 700
+    font-size: 21px
+    margin-bottom: 15px
+
+  .descriptionNewsletter
+    width: 310px
+    font-weight: 300
+    font-size: 12px
+    text-align: center
+    text-transform: lowercase
+    margin-bottom: 31px
+    
+
+  .containerRegisterEmail
+    display: flex
+
+    .email
+      width: 230px
+      height: 45px
+      background: #FFFFFF
+      border: 1px solid #2A2A2A
+      border-radius: 4px
+      padding: 12px 0 12px 25px
+      margin-right: 9px
+
+    button
+      width: 62px
+      height: 45px
+      font-weight: 700
+      font-size: 14px
+      text-transform: uppercase
+      @include mixin.buttonStyle
+
+
+      

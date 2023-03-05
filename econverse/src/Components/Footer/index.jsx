@@ -13,6 +13,7 @@ import ticket from '../../assets/Icons/ticket.svg'
 import sodexo from '../../assets/Icons/sodexo.svg'
 
 import './style.sass'
+import { Newsletter } from '../Newsletter'
 
 export function Footer(){
   return(
@@ -51,12 +52,9 @@ export function Footer(){
           <li className='flag'><img src={ticket} alt="ticket" /></li>          
           <li className='flag'><img src={sodexo} alt="sodexo" /></li>
           
-        </ul>
+        </ul>        
       </div>
-
-      <div>
-        
-      </div>
+      <Newsletter/>
     </footer>
   )
 }
