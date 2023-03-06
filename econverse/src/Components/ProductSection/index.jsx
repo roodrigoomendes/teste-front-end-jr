@@ -31,6 +31,7 @@ export function ProductSection(){
 
   
   return(
+    
     <section className='containerSectionProduct'>
       <div className='arrow'>
       <img src={ArrowDirection} alt="Esquerda"  onClick={handleLeftClick}/>
@@ -48,9 +49,15 @@ export function ProductSection(){
                 <p className='descriptionProduct'>
                   {descriptionShort}
                 </p>
-                <p className='oldPrice'>R$<span>30,90</span></p>
-                <p className='currentPrice'>R$<span>{price}</span></p>
-                <p className='portion'>ou 2x de R$ 49,95 sem juros</p>
+                <p className='oldPrice'>R$<span>
+                  {price*1.2}
+                </span></p>
+                <p className='currentPrice'>R$ <span>
+                  {price.toLocaleString("pt-br",{minimumFractionDigits: 2})}
+                </span></p>
+                <p className='portion'>ou 2x de R$ 
+                {(price/2).toLocaleString("pt-br",{minimumFractionDigits: 2})} sem juros
+                </p>
                 <p className='shippingTag'>Frete grátis</p>
                 <button className='buy'>Comprar</button>
               </div>
