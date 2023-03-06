@@ -26,10 +26,13 @@ export function ProductSection(){
   const handleRightClick = (event) =>{
     event.preventDefault()
     carousel.current.scrollLeft += carousel.current.offsetWidth
-
   }
 
-  
+  const realFormat = (valor)=> {
+    const result = valor.toLocaleString("pt-br",{minimumFractionDigits: 2})
+    return result
+  }
+
   return(
     
     <section className='containerSectionProduct'>
@@ -50,13 +53,12 @@ export function ProductSection(){
                   {descriptionShort}
                 </p>
                 <p className='oldPrice'>R$<span>
-                  {price*1.2}
-                </span></p>
+                  {realFormat(price*1.2)}                </span></p>
                 <p className='currentPrice'>R$ <span>
-                  {price.toLocaleString("pt-br",{minimumFractionDigits: 2})}
+                  {realFormat(price)}
                 </span></p>
                 <p className='portion'>ou 2x de R$ 
-                {(price/2).toLocaleString("pt-br",{minimumFractionDigits: 2})} sem juros
+                  {realFormat(price/2)}
                 </p>
                 <p className='shippingTag'>Frete grátis</p>
                 <button className='buy'>Comprar</button>
