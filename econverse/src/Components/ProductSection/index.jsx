@@ -1,10 +1,14 @@
-import ArrowDirection from '../../assets/Icons/directionarrow.png'
+import React from 'react';
+import ArrowDirection from '../../assets/Icons/directionarrow.png';
 import axios from "axios";
 import { useState, useEffect, useRef } from 'react';
 import './style.sass'
 
-export function ProductSection(){
+export function ProductSection({ setOpenModal}) {
   const [products, setProducts] = useState([]);
+
+
+
   const carousel = useRef(null);
 
   useEffect(() => {
@@ -33,6 +37,12 @@ export function ProductSection(){
     return result
   }
 
+
+
+  const handleProductClick = (product) => {
+    setOpenModal(true);
+  }
+
   return(
     
     <section className='containerSectionProduct'>
@@ -44,7 +54,7 @@ export function ProductSection(){
         {products.map((product) => {
           const{productName, photo, descriptionShort, price} = product
           return(
-            <li className='cardProduct' key={productName}>
+            <li className='cardProduct' key={productName} onClick={() => handleProductClick(product)}>
               <div className='imageContainer'>
                 <img src={photo} alt={productName} />
               </div>
@@ -53,7 +63,7 @@ export function ProductSection(){
                   {descriptionShort}
                 </p>
                 <p className='oldPrice'>R$<span>
-                  {realFormat(price*1.2)}                </span></p>
+                  {realFormat(price*1.2)}</span></p>
                 <p className='currentPrice'>R$ <span>
                   {realFormat(price)}
                 </span></p>

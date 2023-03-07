@@ -7,17 +7,27 @@ import { PartnersSection } from "./Components/PartnersSection";
 import { BrandsSection } from "./Components/BrandsSection";
 import { Footer } from "./Components/Footer";
 import { CopyrightSection } from "./Components/CopyrightSection";
+import { Modal } from "./Components/Modal";
+import { useState } from 'react';
 
 
 function App() {
 
+  const [openModal, setOpenModal] = useState(true)
+
+  
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
   return (
     <div className="App">
+      <Modal isOpen={openModal} onClose={handleCloseModal} />
       <Navbar/>
       <Header/>
       <TitleSection Title={'Produtos relacionados'}>
         <Subcategory/>
-      <ProductSection/>
+        <ProductSection setOpenModal={setOpenModal} />
       </TitleSection>
       <PartnersSection/>
       <TitleSection Title={'Produtos relacionados'}>
