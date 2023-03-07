@@ -25,9 +25,9 @@ export function Footer(){
           <a className='optionFooter' href="#">como comprar</a>
           <a className='optionFooter' href="#">indicação e desconto</a>
           <div className='footerLinkSocial'>
-            <img src={facebook} alt="facebook" />
-            <img src={instagram} alt="instagram" />
-            <img src={youtube} alt="youtube" />
+            <a href=""><img src={facebook} alt="facebook" /></a>
+            <a href=""><img src={instagram} alt="instagram" /></a>
+            <a href=""><img src={youtube} alt="youtube" /></a>
           </div>
         </div>
         <div className='footerInformation columnCenter footerDirection'>

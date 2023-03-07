@@ -13,7 +13,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [openModal, setOpenModal] = useState(true)
+  const [openModal, setOpenModal] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState('');
 
   
@@ -35,13 +35,13 @@ function App() {
       <PartnersSection/>
       <TitleSection Title={'Produtos relacionados'}>
         <a href="#">Ver Todos</a>
-      <ProductSection/>
+        <ProductSection setOpenModal={setOpenModal} setSelectedProduct={setSelectedProduct}/>
       </TitleSection>
       <PartnersSection/>
       <BrandsSection/>      
       <TitleSection Title={'Produtos relacionados'}>
         <a href="#">Ver Todos</a>
-      <ProductSection/>
+        <ProductSection setOpenModal={setOpenModal} setSelectedProduct={setSelectedProduct}/>
       </TitleSection>
       <Footer/>
       <CopyrightSection/>

@@ -5,10 +5,8 @@ import { useState, useEffect, useRef } from 'react';
 import './style.sass'
 
 export function ProductSection({ setOpenModal , setSelectedProduct }) {
+
   const [products, setProducts] = useState([]);
-
-
-
   const carousel = useRef(null);
 
   useEffect(() => {
@@ -20,8 +18,7 @@ export function ProductSection({ setOpenModal , setSelectedProduct }) {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
-
+  },[]);
 
   const handleLeftClick = (event) =>{
     event.preventDefault()
@@ -42,8 +39,7 @@ export function ProductSection({ setOpenModal , setSelectedProduct }) {
     setSelectedProduct(product);
   }
 
-  return(
-    
+  return(    
     <section className='containerSectionProduct'>
       <div className='arrow'>
       <img src={ArrowDirection} alt="Esquerda"  onClick={handleLeftClick}/>
@@ -53,20 +49,20 @@ export function ProductSection({ setOpenModal , setSelectedProduct }) {
         {products.map((product) => {
           const {productName, photo, descriptionShort, price} = product
           return(
-            <li className='cardProduct' key={productName} 
-            onClick={() => handleProductClick(product)}>
+            <li className='cardProduct' key={productName} onClick={() => handleProductClick(product)}>
               <div className='imageContainer'>
                 <img src={photo} alt={productName} />
               </div>
               <div className='containerDetails'>
-                <p className='descriptionProduct'>
+                <h1 className='descriptionProduct'>
                   {descriptionShort}
-                </p>
-                <p className='oldPrice'>R$<span>
-                  {realFormat(price*1.2)}</span></p>
-                <p className='currentPrice'>R$ <span>
+                </h1>
+                <h4 className='oldPrice'>R$<span>
+                  {realFormat(price*1.2)}</span>
+                </h4>
+                <h2 className='currentPrice'>R$ <span>
                   {realFormat(price)}
-                </span></p>
+                </span></h2>
                 <p className='portion'>ou 2x de R$ 
                   {realFormat(price/2)}
                 </p>
@@ -77,7 +73,6 @@ export function ProductSection({ setOpenModal , setSelectedProduct }) {
           )
         })
       }
-        
       </div>
       <div className='arrow'>
         <img className='right' src={ArrowDirection} alt="Esquerda"  onClick={handleRightClick}/>

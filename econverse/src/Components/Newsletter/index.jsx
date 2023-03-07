@@ -13,7 +13,7 @@ export function Newsletter(){
         sunt <br/> in culpa qui officia lorem ipsum
       </p>
       <div className='containerRegisterEmail'>
-        <input className='email' type="email" name="email" id="email" placeholder='SEU E-EMAIL' />
+        <input className='email' type="email" name="email" id="email" placeholder='SEU E-EMAIL' autocomplete="off"/>
         <button>ok</button>
       </div>
     </div>

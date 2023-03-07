@@ -35,21 +35,21 @@ export function Navbar(){
         <img src={vtex} alt="vtex" />
         
         <div className='box-search'>
-          <input type="search" placeholder='O que você está buscando?' name="search" id="search" />
+          <input type="search" placeholder='O que você está buscando?' name="search" id="search" autocomplete="off"/>
           <img src={magnifyingGlass} alt="Research" />
         </div>
 
         <div className='box-shortcuts'>
-          <a href="">
+          <a href="#">
             <img src={order} alt="Order" />
           </a>
-          <a href="">
+          <a href="#">
             <img src={heart} alt="Favorites" />
           </a>
-          <a href="">
+          <a href="#">
             <img src={usercircle} alt="User" />
           </a>
-          <a href="">
+          <a href="#">
             <img src={shoppingCart} alt="ShoppingCart" />
           </a>
         </div>
@@ -62,7 +62,7 @@ export function Navbar(){
         <a className='categories' href="#">livros</a>
         <a className='categories' href="#">moda</a>
         <a className='categories' href="#">lançamentos</a>
-        <a className='categories active' href="#">oferta do dia</a>
+        <a className='categories activeBottom' href="#">oferta do dia</a>
         <a className='categories' href="#">
           <img src={crownSimple} alt="logo crownSimple" />
           assiantura</a>
