@@ -14,20 +14,23 @@ import { useState } from 'react';
 function App() {
 
   const [openModal, setOpenModal] = useState(true)
+  const [selectedProduct, setSelectedProduct] = useState('');
 
   
   const handleCloseModal = () => {
     setOpenModal(false);
+    setSelectedProduct(null);
   };
-
+  
+  
   return (
     <div className="App">
-      <Modal isOpen={openModal} onClose={handleCloseModal} />
+      <Modal isOpen={openModal} onClose={handleCloseModal} product={selectedProduct}/>
       <Navbar/>
       <Header/>
       <TitleSection Title={'Produtos relacionados'}>
         <Subcategory/>
-        <ProductSection setOpenModal={setOpenModal} />
+        <ProductSection setOpenModal={setOpenModal} setSelectedProduct={setSelectedProduct}/>
       </TitleSection>
       <PartnersSection/>
       <TitleSection Title={'Produtos relacionados'}>

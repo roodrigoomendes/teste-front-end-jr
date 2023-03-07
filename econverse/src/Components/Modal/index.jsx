@@ -1,27 +1,29 @@
 import React from 'react'
 import './style.sass'
 
-export function Modal({ isOpen, onClose }) {
+export function Modal({ isOpen, onClose , product}) {
 
 
   const handleCloseModal = () => {
-    setOpenModal(false);
+    onClose();
   };
 
+  console.log(product)
   if(isOpen){
+    const{productName, photo, descriptionShort, price} = product
     return (
       <div className='backgroundModal'>
         <div className='containerModal'>
           <span className='close' onClick={onClose}>X</span>
           <div className='contentModal'>
             <div className='imageModal'>
-              <img src="" alt="" />
+            <img src={product ? photo : "Carregando..."} alt={product ? productName : "Carregando..."} /><img src={''} alt="" />
             </div>
             <div className='descriptionModal'>
-              <h1 className='nameProductModal'>nome</h1>
-              <h2 className='priceProductModal'>R$ </h2>
+              <h1 className='nameProductModal'><p>{product ? productName : "Carregando..."}</p></h1>
+              <h2 className='priceProductModal'>R$ {product ? price : "Carregando..."}</h2>
               <p className='descriptionProductModal'>
-              Many desktop publishing packages and web page editors now many desktop publishing
+              {product ? descriptionShort : "Carregando..."}
               </p>
               <a href="#" className='linkProductModal'>Veja mais detalhes do produto </a>
             </div>

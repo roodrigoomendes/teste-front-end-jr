@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState, useEffect, useRef } from 'react';
 import './style.sass'
 
-export function ProductSection({ setOpenModal}) {
+export function ProductSection({ setOpenModal , setSelectedProduct }) {
   const [products, setProducts] = useState([]);
 
 
@@ -37,10 +37,9 @@ export function ProductSection({ setOpenModal}) {
     return result
   }
 
-
-
   const handleProductClick = (product) => {
     setOpenModal(true);
+    setSelectedProduct(product);
   }
 
   return(
@@ -52,9 +51,10 @@ export function ProductSection({ setOpenModal}) {
       <div className='listProduct' ref={carousel}>
 
         {products.map((product) => {
-          const{productName, photo, descriptionShort, price} = product
+          const {productName, photo, descriptionShort, price} = product
           return(
-            <li className='cardProduct' key={productName} onClick={() => handleProductClick(product)}>
+            <li className='cardProduct' key={productName} 
+            onClick={() => handleProductClick(product)}>
               <div className='imageContainer'>
                 <img src={photo} alt={productName} />
               </div>
@@ -76,11 +76,11 @@ export function ProductSection({ setOpenModal}) {
             </li>
           )
         })
-        }
+      }
         
       </div>
       <div className='arrow'>
-      <img className='right' src={ArrowDirection} alt="Esquerda"  onClick={handleRightClick}/>
+        <img className='right' src={ArrowDirection} alt="Esquerda"  onClick={handleRightClick}/>
       </div>
     </section>
   )
