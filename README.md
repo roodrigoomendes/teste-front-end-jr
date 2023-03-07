@@ -5,11 +5,6 @@
 <br />
 <div align="center">
     <img src="https://www.econverse.com.br/wp-content/uploads/2022/01/logo-econverse-white.png" alt="Logo" width="180" height="80">
-
-  <p align="center">
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><h2>Acessar DEMO</h2></a>
-  </p>
 </div>
 
 
